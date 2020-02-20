@@ -1,0 +1,22 @@
+server:
+  port: 9092
+
+spring:
+  application:
+    name: api-gateway
+
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url: http://localhost:8761/eureka/
+management:
+  endpoints:
+    routes:
+      enable: true
+    web:
+      exposure:
+        include: *

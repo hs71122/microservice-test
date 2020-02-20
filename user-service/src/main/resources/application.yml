@@ -1,0 +1,26 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: user-service
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: testing
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url: http://localhost:8761/eureka/
+management:
+  endpoints:
+    routes:
+      enable: true
+    web:
+      exposure:
+        include: *
